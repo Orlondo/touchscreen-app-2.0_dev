@@ -1,0 +1,289 @@
+/* Variables */
+$app-width: 1920px;
+
+/* Global */
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    background: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: $m-size;
+}
+
+ul, li {
+    list-style-type: none;
+    list-style-position:inside;
+    margin: 0;
+    padding: 0;
+}
+
+.dataBlock {
+    p {
+        margin-bottom: 0.1rem;
+    } 
+}
+
+#app {
+    position: absolute;
+    height: 100%;
+    width: $app-width;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#app div::after {
+    width: inherit;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: $app-width;
+    height: 90px;
+    background: grayscale($color: #dddddd);    
+}
+
+.disabled {
+    display: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: $app-width;
+    height: 90px;
+    background: grayscale($color: #dddddd);
+}
+
+button {
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.scene {
+    height: inherit;
+    width: $app-width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.menu-button {
+    border: 1px solid rgba(#000000, 1.0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-button:disabled {
+    cursor: default;
+}
+
+.selection-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Header */
+.header-nav-container {
+    position: absolute;
+    right: 45px;
+}
+
+/* Main Menu */
+.mainMenu-btn {
+    width: 37rem;
+    height: 15rem;
+    margin: 1px;
+}
+
+/* Company Menu buttons */
+.company-btn {
+    width: 60.8rem;
+    height: 36rem;
+    margin: 1px;
+}
+
+/* Applications Menu buttons */
+.applications-btn {
+    width: 45.54rem;
+    height: 36rem;
+    margin: 1px;
+}
+
+/* Services Menu buttons */
+.services-btn {
+    width: 45.54rem;
+    height: 36rem;
+    margin: 1px;
+}
+
+/* Sub-menus buttons */
+.sub-menu-btn {
+    width: 36.2rem;
+    height: 27.55rem;
+    margin: 1px;
+    background: #fff;
+}
+
+/* Section Header */
+.section-header {
+    display: block;
+    width: inherit;
+}
+
+/* DataBlock Container */
+.dataBlock-container {
+    position: absolute;
+    background-color: rgba(5,21,33,0.7);
+    color: #fff;
+    left: 0px;
+    width: 520px;
+    height: 100%;
+    // border: 1px solid #000;
+    padding: 0px 40px;
+
+    hr {
+        border-color: #fff; 
+    }
+}
+
+.dataBlock-container:nth-child(1) > h2 {
+    margin-top: 160px;
+}
+
+.gallery-container {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1380px;
+    height: 870px;
+    padding: 0px 4px;
+    padding-bottom: 0px;
+}
+
+.selectedItem-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 137.4rem;
+    border: 1px solid #000;
+    overflow: hidden;
+
+    img {
+        // width: 100%;
+        height: 100%;
+    }
+}
+
+/* Item Container */
+.item-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 172px * 8;
+}
+
+
+/* Item Menu */
+.itemMenu-btn {
+    width: 170px;
+    height: 100px;
+    margin: 1px;
+    span {
+        pointer-events: none;
+    }
+}
+
+/* Mission Values Table */
+table.mission-values-table {
+    width: 100%;
+
+    td {
+        height: 8.5rem;
+        vertical-align: top;
+        padding: 0px 5px;
+    }
+    
+}
+
+/* Specifications Tables */
+table.specs-table{
+    width: 100%;
+
+    td {
+        vertical-align: top;
+        padding: 5px 5px;
+    }
+}
+
+// Tescor Table specs
+.tescor-condition {
+    text-align: center
+}
+
+.values-header {
+    padding-bottom: 5px;
+}
+
+/* React Video Component */
+.video-react {
+    padding-top: 0;
+    position: relative;
+    height: 100% !important;
+    width: 100% !important;
+    background: rgba(0,0,0,0.4);
+} 
